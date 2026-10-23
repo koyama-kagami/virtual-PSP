@@ -1,5 +1,7 @@
 # virtual-PSP
 
+**简体中文** | [English](README.en.md)
+
 可以旋转、换色和操作的网页虚拟 PSP。使用 Three.js 展示 PSP-1000 / 2000 / 3000，通过本地桥接连接 PPSSPP，运行 Sony 6.61 原版 XMB。
 
 ![黑色机身与红色背壳的实际页面截图](docs/screenshots/appearance.jpg)
