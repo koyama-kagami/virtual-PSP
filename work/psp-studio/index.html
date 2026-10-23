@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="PSP-3000 交互式三维模型。">
+  <title>PSP</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'%3E%3Crect width='40' height='40' rx='8' fill='%2308090c'/%3E%3Cpath d='M9 30V10H25Q32 10 32 18Q32 25 25 25H9' fill='none' stroke='white' stroke-width='2'/%3E%3C/svg%3E">
+  <style>/*__STYLE__*/</style>
+</head>
+<body>
+  <main class="showcase" id="top" aria-labelledby="hero-title">
+    <a class="brand" href="#top" aria-label="PSP，回到正面">
+      <svg class="brand-mark" viewBox="0 0 116 29" aria-hidden="true"><path d="M1 27V15H30V2H1M73 2H43V15H73V27H43M85 27V15H115V2H85"/></svg>
+    </a>
+    <div class="model-picker" role="radiogroup" aria-label="PSP 机型">
+      <button type="button" class="model-option" data-model="1000" role="radio" aria-label="PSP-1000" aria-checked="false" tabindex="-1">1000</button>
+      <button type="button" class="model-option" data-model="2000" role="radio" aria-label="PSP-2000" aria-checked="false" tabindex="-1">2000</button>
+      <button type="button" class="model-option selected" data-model="3000" role="radio" aria-label="PSP-3000" aria-checked="true" tabindex="0">3000</button>
+    </div>
+    <div class="stage">
+      <div class="atmosphere" aria-hidden="true"></div>
+      <div id="viewport" tabindex="0" role="application" aria-describedby="analog-state umd-state hardware-state" aria-label="交互式 PSP-3000 三维模型。拖动机身旋转，拖动摇杆搓动，点击背面 UMD 仓盖开合。滚轮缩放，P 短按开机或待机，长按关机。">
+        <div class="loading" id="loading"><span></span>加载中</div>
+      </div>
+      <div class="failure" id="failure" hidden><strong>当前浏览器无法显示 3D 模型</strong><span>请开启浏览器硬件加速后重新打开。</span></div>
+    </div>
+    <h1 class="sr-only" id="hero-title">PSP</h1>
+    <div class="bottom-area">
+      <div class="finishes" role="group" aria-label="机身颜色">
+        <button id="finish-toggle" class="finish-toggle" aria-label="机身配色：钢琴黑" aria-haspopup="dialog" aria-expanded="false" aria-controls="finish-panel">
+          <span id="finish-current-chip" class="finish-chip" aria-hidden="true"></span>
+          <span id="finish-current-name">钢琴黑</span>
+          <svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m4 10 4-4 4 4"/></svg>
+        </button>
+        <section id="finish-panel" class="finish-panel" role="dialog" aria-label="机身配色" hidden>
+          <div class="finish-heading"><span>机身配色</span><button id="close-finishes" aria-label="关闭配色选择"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="m5 5 10 10M15 5 5 15"/></svg></button></div>
+          <div id="finish-groups" role="radiogroup" aria-label="PSP-3000 配色"></div>
+        </section>
+        <span id="finish-announcement" class="sr-only" role="status" aria-live="polite"></span>
+      </div>
+      <div class="toolbar" role="group" aria-label="模型控制">
+        <button id="front" class="view-button active" aria-label="查看正面" aria-pressed="true">正面</button>
+        <button id="back" class="view-button" aria-label="查看背面" aria-pressed="false">背面</button>
+        <button id="top-view" class="view-button" aria-label="查看顶部接口" aria-pressed="false">顶部</button>
+        <button id="bottom-view" class="view-button" aria-label="查看底部接口" aria-pressed="false">底部</button>
+        <span class="toolbar-divider"></span>
+        <button class="icon-button" id="rotate" aria-label="自动旋转" aria-pressed="false" title="自动旋转">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M20 10a8 8 0 0 0-13-4L4 9m0-5v5h5M4 14a8 8 0 0 0 13 4l3-3m0 5v-5h-5"/></svg>
+        </button>
+        <button class="icon-button" id="sound" aria-label="静音 PSP 原生声音" aria-pressed="true" title="静音 PSP 原生声音">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M11 4 5.5 8H3v8h2.5L11 20V4Z"/><path id="sound-waves" d="m16 9 5 6m0-6-5 6"/></svg>
+        </button>
+        <button class="icon-button" id="help" aria-label="查看操作说明" aria-expanded="false" aria-controls="help-panel">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8.5"/><path d="M9.5 9a2.6 2.6 0 0 1 5 .9c0 1.7-2.5 2-2.5 3.6M12 16.5v.3"/></svg>
+        </button>
+      </div>
+      <button class="power-control" id="power" aria-label="开机" aria-pressed="false">
+        <svg viewBox="0 0 24 24" fill="none"><path d="M12 3v9M7.2 5.8a8 8 0 1 0 9.6 0"/></svg>
+        <span id="power-label">开机</span><span class="status-led" id="status-led" aria-hidden="true"></span>
+      </button>
+    </div>
+    <aside id="help-panel" class="help-panel" hidden>
+      <div class="help-heading"><strong>操作说明</strong><button id="close-help" aria-label="关闭操作说明">×</button></div>
+      <dl>
+        <div><dt>拖动机身</dt><dd>自由旋转</dd></div>
+        <div><dt>拖动摇杆</dt><dd>自由搓动，松手回中</dd></div>
+        <div><dt><kbd>Shift</kbd> + 方向键</dt><dd>键盘控制摇杆</dd></div>
+        <div><dt>点击背面仓盖 / <kbd>U</kbd></dt><dd>机械开合，不装卸原生介质</dd></div>
+        <div><dt>滚轮 / 双指缩放</dt><dd>查看细节</dd></div>
+        <div><dt><kbd>P</kbd> / 电源拨杆上推</dt><dd>连接本机 XMB / 暂停，长按 3 秒停止</dd></div>
+        <div><dt><kbd>H</kbd> / 电源拨杆下拉</dt><dd>HOLD 锁定，拨回中间解锁</dd></div>
+        <div><dt><kbd>V</kbd> / WLAN 拨杆</dt><dd>外观开关，未启用网络模拟</dd></div>
+        <div><dt>方向键 / <kbd>WASD</kbd></dt><dd>原生方向键，支持按住与组合</dd></div>
+        <div><dt><kbd>X</kbd> / <kbd>O</kbd></dt><dd>× / ○，确认键取决于固件设置</dd></div>
+        <div><dt><kbd>I</kbd> / <kbd>J</kbd></dt><dd>△ / □</dd></div>
+        <div><dt><kbd>Q</kbd> / <kbd>E</kbd></dt><dd>L / R 肩键</dd></div>
+        <div><dt><kbd>Enter</kbd> / <kbd>Backspace</kbd></dt><dd>START / SELECT</dd></div>
+        <div><dt><kbd>Home</kbd></dt><dd>原生 PS / HOME 键，依后端能力</dd></div>
+        <div><dt><kbd>−</kbd> / <kbd>+</kbd></dt><dd>音量，按住连续调整</dd></div>
+        <div><dt><kbd>B</kbd> / DISPLAY</dt><dd>宿主亮度，长按 1 秒切换背光</dd></div>
+        <div><dt><kbd>N</kbd> / ♪</dt><dd>长按 1 秒静音，再按恢复</dd></div>
+        <div><dt><kbd>Esc</kbd></dt><dd>复位视角</dd></div>
+      </dl>
+      <p>开机连接本机 PPSSPP，屏幕显示索尼原版 XMB，声音来自原生运行时。需先启动本地桥接并安装固件。机身和键盘传递真实按下、松开及组合键；摇杆松手立即归中。切换机型或颜色保留会话。HOLD、失焦和换壳清除输入；页面隐藏暂停。亮度为宿主控制；UMD 仓仅机械开合。原生功能以当前运行时能力为准。</p>
+    </aside>
+    <span class="sr-only" id="status-label">STANDBY</span>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <div class="sr-only" id="screen-state" role="status" aria-live="polite">PSP 已关机。</div>
+    <output class="sr-only" id="analog-state" aria-live="off">摇杆 X 0.00，Y 0.00</output>
+    <output class="sr-only" id="hardware-state" aria-live="off">按键已松开</output>
+    <div class="sr-only" id="umd-state" role="status" aria-live="polite">UMD 仓已关闭。</div>
+  </main>
+  <script>/*__SCRIPT__*/</script>
+</body>
+</html>

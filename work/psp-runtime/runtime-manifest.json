@@ -1,0 +1,24 @@
+{
+  "recordedAt": "2026-10-23T00:22:00+08:00",
+  "core": {
+    "name": "PPSSPP",
+    "version": "v1.20.4-3683-ga9175126e258",
+    "commit": "a9175126e258fba8c92bece749014e75aa7cc6b3",
+    "url": "https://builds.ppsspp.org/builds/v1.20.4-3683-ga9175126e258/ppsspp_win_v1.20.4-3683-ga9175126e258.zip",
+    "archive": "downloads/ppsspp_win_v1.20.4-3683-ga9175126e258.zip",
+    "sha256": "9515f6e7f7cdc209f47b2b619af58c169dfa33d46af77b6728183d352626f325",
+    "executable": "ppsspp/PPSSPPWindows64.exe",
+    "executableSha256": "1e3d453fd057339b4193e3d5008699fbaf828262b30ed9d21c81a4da0a7223a6"
+  },
+  "firmware": {
+    "name": "Sony PSP firmware",
+    "version": "6.61",
+    "officialGuide": "https://www.ppsspp.org/docs/getting-started/how-to-run-the-vsh/",
+    "url": "https://du01.psp.update.playstation.org/update/psp/image/us/2014_1212_6be8878f475ac5b1a499b95ab2f7d301/EBOOT.PBP",
+    "fallbackUrl": "http://du01.psp.update.playstation.org/update/psp/image/us/2014_1212_6be8878f475ac5b1a499b95ab2f7d301/EBOOT.PBP",
+    "file": "downloads/PSP-6.61-EBOOT.PBP",
+    "sha256": "dc23a6dabdaed40bbfaad811d1f170346b911ba9750478fe5928d9f10c94f552",
+    "md5": "6be8878f475ac5b1a499b95ab2f7d301",
+    "transportNote": "The official HTTPS endpoint failed hostname certificate validation. The same official host/path over HTTP was downloaded and matched the MD5 in Sony's official URL. TLS validation was not disabled."
+  }
+}

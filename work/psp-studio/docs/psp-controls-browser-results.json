@@ -1,0 +1,394 @@
+{
+  "date": "2026-10-22",
+  "front3000": [
+    {
+      "key": "上",
+      "down": "↑ 按下",
+      "up": "↑ 松开",
+      "response": "游戏 · UMD™"
+    },
+    {
+      "key": "下",
+      "down": "↓ 按下",
+      "up": "↓ 松开",
+      "response": "游戏 · Memory Stick™"
+    },
+    {
+      "key": "左",
+      "down": "← 按下",
+      "up": "← 松开",
+      "response": "视频 · Memory Stick™"
+    },
+    {
+      "key": "右",
+      "down": "→ 按下",
+      "up": "→ 松开",
+      "response": "游戏 · UMD™"
+    },
+    {
+      "key": "△",
+      "down": "△ 按下",
+      "up": "△ 松开",
+      "response": "UMD™ · 选项"
+    },
+    {
+      "key": "○",
+      "down": "○ 按下",
+      "up": "○ 松开",
+      "response": "返回主菜单"
+    },
+    {
+      "key": "×",
+      "down": "× 按下",
+      "up": "× 松开",
+      "response": "未放入 UMD™。本演示未接入游戏模拟器。"
+    },
+    {
+      "key": "□",
+      "down": "□ 按下",
+      "up": "□ 松开",
+      "response": "□ 已按下 · 当前没有播放内容"
+    },
+    {
+      "key": "PS",
+      "down": "PS 按下",
+      "up": "PS 松开",
+      "response": "主菜单"
+    },
+    {
+      "key": "音量−",
+      "down": "音量 − 按下",
+      "up": "音量 − 松开",
+      "response": "音量 17 / 30"
+    },
+    {
+      "key": "音量+",
+      "down": "音量 + 按下",
+      "up": "音量 + 松开",
+      "response": "音量 18 / 30"
+    },
+    {
+      "key": "DISPLAY",
+      "down": "DISPLAY 按下",
+      "up": "DISPLAY 松开",
+      "response": "背光亮度 1 / 3"
+    },
+    {
+      "key": "♪",
+      "down": "♪ 按下",
+      "up": "♪ 松开",
+      "response": "音质模式切换仅在连接耳机时可用"
+    },
+    {
+      "key": "SELECT",
+      "down": "SELECT 按下",
+      "up": "SELECT 松开",
+      "response": "SELECT 已按下 · 当前没有播放内容"
+    },
+    {
+      "key": "START",
+      "down": "START 按下",
+      "up": "START 松开",
+      "response": "START 已按下 · 当前没有播放内容"
+    }
+  ],
+  "frontOtherModels": [
+    {
+      "model": "1000",
+      "key": "上",
+      "down": "↑ 按下；按住：↑",
+      "up": "↑ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "下",
+      "down": "↓ 按下；按住：↓",
+      "up": "↓ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "左",
+      "down": "← 按下；按住：←",
+      "up": "← 松开"
+    },
+    {
+      "model": "1000",
+      "key": "右",
+      "down": "→ 按下；按住：→",
+      "up": "→ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "△",
+      "down": "△ 按下；按住：△",
+      "up": "△ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "○",
+      "down": "○ 按下；按住：○",
+      "up": "○ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "×",
+      "down": "× 按下；按住：×",
+      "up": "× 松开"
+    },
+    {
+      "model": "1000",
+      "key": "□",
+      "down": "□ 按下；按住：□",
+      "up": "□ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "HOME",
+      "down": "HOME 按下；按住：HOME",
+      "up": "HOME 松开"
+    },
+    {
+      "model": "1000",
+      "key": "音量−",
+      "down": "音量 − 按下；按住：音量 −",
+      "up": "音量 − 松开"
+    },
+    {
+      "model": "1000",
+      "key": "音量+",
+      "down": "音量 + 按下；按住：音量 +",
+      "up": "音量 + 松开"
+    },
+    {
+      "model": "1000",
+      "key": "DISPLAY",
+      "down": "DISPLAY 按下；按住：DISPLAY",
+      "up": "DISPLAY 松开"
+    },
+    {
+      "model": "1000",
+      "key": "♪",
+      "down": "♪ 按下；按住：♪",
+      "up": "♪ 松开"
+    },
+    {
+      "model": "1000",
+      "key": "SELECT",
+      "down": "SELECT 按下；按住：SELECT",
+      "up": "SELECT 松开"
+    },
+    {
+      "model": "1000",
+      "key": "START",
+      "down": "START 按下；按住：START",
+      "up": "START 松开"
+    },
+    {
+      "model": "2000",
+      "key": "上",
+      "down": "↑ 按下；按住：↑",
+      "up": "↑ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "下",
+      "down": "↓ 按下；按住：↓",
+      "up": "↓ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "左",
+      "down": "← 按下；按住：←",
+      "up": "← 松开"
+    },
+    {
+      "model": "2000",
+      "key": "右",
+      "down": "→ 按下；按住：→",
+      "up": "→ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "△",
+      "down": "△ 按下；按住：△",
+      "up": "△ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "○",
+      "down": "○ 按下；按住：○",
+      "up": "○ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "×",
+      "down": "× 按下；按住：×",
+      "up": "× 松开"
+    },
+    {
+      "model": "2000",
+      "key": "□",
+      "down": "□ 按下；按住：□",
+      "up": "□ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "HOME",
+      "down": "HOME 按下；按住：HOME",
+      "up": "HOME 松开"
+    },
+    {
+      "model": "2000",
+      "key": "音量−",
+      "down": "音量 − 按下；按住：音量 −",
+      "up": "音量 − 松开"
+    },
+    {
+      "model": "2000",
+      "key": "音量+",
+      "down": "音量 + 按下；按住：音量 +",
+      "up": "音量 + 松开"
+    },
+    {
+      "model": "2000",
+      "key": "DISPLAY",
+      "down": "DISPLAY 按下；按住：DISPLAY",
+      "up": "DISPLAY 松开"
+    },
+    {
+      "model": "2000",
+      "key": "♪",
+      "down": "♪ 按下；按住：♪",
+      "up": "♪ 松开"
+    },
+    {
+      "model": "2000",
+      "key": "SELECT",
+      "down": "SELECT 按下；按住：SELECT",
+      "up": "SELECT 松开"
+    },
+    {
+      "model": "2000",
+      "key": "START",
+      "down": "START 按下；按住：START",
+      "up": "START 松开"
+    }
+  ],
+  "shoulders3000": [
+    {
+      "label": "L",
+      "down": "L 按下",
+      "up": "L 松开"
+    },
+    {
+      "label": "R",
+      "down": "R 按下",
+      "up": "R 松开"
+    },
+    {
+      "label": "WLAN 滑动开启",
+      "response": "WLAN 开关已开启（未联网）"
+    },
+    {
+      "label": "WLAN 点击关闭",
+      "response": "WLAN 开关已关闭"
+    }
+  ],
+  "longPress": [
+    {
+      "label": "解除静音",
+      "response": "已解除静音"
+    },
+    {
+      "label": "音量连发",
+      "response": "音量 24 / 30"
+    },
+    {
+      "label": "关闭背光",
+      "response": "背光已关闭，按任意系统键恢复"
+    },
+    {
+      "label": "待机",
+      "response": "PSP 已进入待机"
+    },
+    {
+      "label": "唤醒并恢复背光",
+      "response": "已从待机唤醒"
+    },
+    {
+      "label": "长按关机",
+      "response": "PSP 已完全关机"
+    },
+    {
+      "label": "重新开机",
+      "response": "PSP 已开机 · 交互演示"
+    }
+  ],
+  "mechanical": [
+    {
+      "label": "1000 L",
+      "key": "L 松开",
+      "door": "UMD 仓已关闭。"
+    },
+    {
+      "label": "1000 R",
+      "key": "R 松开",
+      "door": "UMD 仓已关闭。"
+    },
+    {
+      "label": "1000 OPEN",
+      "key": "OPEN 松开",
+      "door": "UMD 仓已打开。再次点击仓盖可关闭。"
+    },
+    {
+      "label": "1000 电池卡扣",
+      "key": "电池盖卡扣 松开",
+      "message": "电池盖卡扣已按下（暂未模拟拆盖）"
+    },
+    {
+      "label": "1000 WLAN 上推",
+      "key": "WLAN 松开",
+      "response": "WLAN 开关已开启（未联网）"
+    },
+    {
+      "label": "2000 L",
+      "key": "L 松开",
+      "response": "L 已按下 · 当前没有播放内容"
+    },
+    {
+      "label": "2000 R",
+      "key": "R 松开",
+      "response": "R 已按下 · 当前没有播放内容"
+    },
+    {
+      "label": "2000 WLAN",
+      "key": "WLAN 松开",
+      "response": "WLAN 开关已关闭"
+    },
+    {
+      "label": "2000 电池卡扣",
+      "key": "电池盖卡扣 松开",
+      "message": "电池盖卡扣已按下（暂未模拟拆盖）"
+    },
+    {
+      "label": "2000 UMD",
+      "door": "UMD 仓已打开。再次点击仓盖可关闭。"
+    },
+    {
+      "label": "3000 电池卡扣",
+      "key": "电池盖卡扣 松开",
+      "message": "电池盖卡扣已按下（暂未模拟拆盖）"
+    },
+    {
+      "label": "3000 UMD",
+      "door": "UMD 仓已打开。再次点击仓盖可关闭。"
+    }
+  ],
+  "multiSource": "Holding mouse cross, press and release keyboard Q: L 松开；按住：×. Then release mouse: × 松开.",
+  "powerRegression": "After long power OFF, move pointer upwards and release: remains PSP 已完全关机.",
+  "analog": {
+    "held": "X 0.73, Y 0.68",
+    "released": "X 0.00, Y 0.00"
+  },
+  "touchDeviceVerified": false
+}
